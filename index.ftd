@@ -1,22 +1,22 @@
--- import: fastn-community.github.io/sunset-business-card/docs
--- import: fastn-community.github.io/sunset-business-card
+-- import: fastn-community.github.io/midnight-business-card/docs
+-- import: fastn-community.github.io/midnight-business-card
 -- import: fastn-stack.github.io/fastn-js/utils
 -- import: fastn-community.github.io/bling/note
 
 
 
--- site-doc.doc-home: Sunset Business Card
-current-package: fastn-community.github.io/sunset-business-card
+-- site-doc.doc-home: Midnight Business Card
+current-package: fastn-community.github.io/midnight-business-card
 show-tabs: false
 github-url: https://github.com/fastn-community/business-card
-site-title: Sunset Business Card
+site-title: Midnight Business Card
 
 This guide will demonstrate how to make simple business cards using `fastn`. 
 
 `fastn` is a beginner friendly web-development platform. 
 Check out [`fastn`](https://fastn.com/).
 
--- sunset-business-card.details: John Doe
+-- midnight-business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
 title: Software Developer
 phone-no: +91 12345 99999
@@ -93,7 +93,7 @@ link: integrate/
 
 -- cb.code: Example usage
 
-\-- sunset-business-card.details: John Doe
+\-- midnight-business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
 title: Software Developer
 phone-no: +91 12345 99999
@@ -108,7 +108,7 @@ website: www.johndoe.com
 
 -- string front-sample-code:
 
-\-- import: fastn-community.github.io/sunset-business-card
+\-- import: fastn-community.github.io/midnight-business-card
 
 \-- business-card.front: John Doe
 title: Software Developer
@@ -118,7 +118,7 @@ logo: $assets.files.assets.fastn-logo.svg
 
 -- string back-sample-code:
 
-\-- import: fastn-community.github.io/sunset-business-card
+\-- import: fastn-community.github.io/midnight-business-card
 
 \-- business-card.back: 
 logo: $assets.files.assets.fastn-logo.svg
@@ -283,10 +283,12 @@ optional string website:
 width: fill-container
 overflow: auto
 
--- ftd.row:
+-- ftd.column:
 width.fixed.px: 700
 height.fixed.px: 350
-background.solid: #FFFFFF
+background.solid: #19213D
+align-content: center
+color: #FFFFFF
 
 -- ftd.image:
 if: { front.qr-code != NULL }
@@ -299,59 +301,132 @@ top.px: 12
 z-index: 2
 
 -- ftd.column:
-width.fixed.percent: 40
-height: fill-container
+width: fill-container
 align-content: center
-spacing.fixed.px: 16
-background.solid: #EF8435
 
 -- ftd.text: $front.name
-role: $inherited.types.heading-medium
-color: #FFFFFF
+role: $inherited.types.heading-large
 
 -- ftd.text: $front.title
 role: $inherited.types.copy-regular
-color: #FFFFFF
-
--- end: ftd.column
+margin-top.px: 12
 
 -- ftd.column:
-width.fixed.percent: 60
-height: fill-container
-align-content: center
-padding-horizontal.px: 24
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 34
 
--- ftd.column:
-width.fixed.percent: 80
-align-content: left
-spacing.fixed.px: 12
-
--- ftd.text: $front.email
+-- ftd.row:
 if: { front.email != NULL }
-color: #5D6481
+width: fill-container
+align-content: center
+spacing.fixed.px: 24
+padding-horizontal.px: 90
+
+-- ftd.text: Email:
 role: $inherited.types.fine-print
+min-width.fixed.percent: 20
 
--- ftd.text: $front.phone-no
-if: { front.phone-no != NULL }
-color: #5D6481
-role: $inherited.types.fine-print
-
--- ftd.text: $front.address
-if: { front.address != NULL }
-color: #5D6481
-role: $inherited.types.fine-print
-
--- ftd.text: $front.website
-if: { front.address != NULL }
-color: #5D6481
-role: $inherited.types.fine-print
-text-align: center
-
--- end: ftd.column
-
--- end: ftd.column
+-- ftd.row:
+width: fill-container
+align-self: center
+height.fixed.px: 1
+background.solid: #ebeff68c
+border-radius.px: 10
 
 -- end: ftd.row
+
+-- ftd.text: $front.email
+role: $inherited.types.fine-print
+min-width.fixed.percent: 30
+white-space: nowrap
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { front.phone-no != NULL }
+width: fill-container
+align-content: center
+spacing.fixed.px: 24
+padding-horizontal.px: 90
+
+-- ftd.text: Phone:
+role: $inherited.types.fine-print
+min-width.fixed.percent: 20
+
+-- ftd.row:
+width: fill-container
+align-self: center
+height.fixed.px: 1
+background.solid: #ebeff68c
+border-radius.px: 10
+
+-- end: ftd.row
+
+-- ftd.text: $front.phone-no
+role: $inherited.types.fine-print
+min-width.fixed.percent: 30
+white-space: nowrap
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { front.address != NULL }
+width: fill-container
+align-content: center
+spacing.fixed.px: 24
+padding-horizontal.px: 90
+
+-- ftd.text: Address:
+role: $inherited.types.fine-print
+min-width.fixed.percent: 20
+
+-- ftd.row:
+width: fill-container
+align-self: center
+height.fixed.px: 1
+background.solid: #ebeff68c
+border-radius.px: 10
+
+-- end: ftd.row
+
+-- ftd.text: $front.address
+role: $inherited.types.fine-print
+min-width.fixed.percent: 30
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { front.website != NULL }
+width: fill-container
+align-content: center
+spacing.fixed.px: 24
+padding-horizontal.px: 90
+
+-- ftd.text: Website:
+role: $inherited.types.fine-print
+min-width.fixed.percent: 20
+
+-- ftd.row:
+width: fill-container
+align-self: center
+height.fixed.px: 1
+background.solid: #ebeff68c
+border-radius.px: 10
+
+-- end: ftd.row
+
+-- ftd.text: $front.website
+role: $inherited.types.fine-print
+min-width.fixed.percent: 30
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -386,7 +461,7 @@ overflow: auto
 -- ftd.row:
 width.fixed.px: 700
 height.fixed.px: 350
-background.solid: #EF8435
+background.solid: #19213D
 spacing: space-around
 align-content: center
 
@@ -423,4 +498,4 @@ margin-top.px: 16
 src: $assets.files.assets.bg-back.svg
 repeat: no-repeat
 position: center
-
+size: contain
