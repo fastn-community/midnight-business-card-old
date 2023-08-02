@@ -1,24 +1,24 @@
-# Sunset Business Card
+# Midnight Business Card
 
-fastn-community.github.io/sunset-business-card is a fastn business card
+fastn-community.github.io/midnight-business-card is a fastn business card
 component which contains front and back UI of a business card. Sunset business
 card can be used on your fastn web projects.
 
 # Preview
 
-## Sunset Business Card Front:
+## Midnight Business Card Front:
 
-![Sunset Business Card - front](.github/assets/sunset-business-card-front.jpg)
+![Midnight Business Card - front](.github/assets/midnight-business-card-front.jpg)
 
-## Sunset Business Card Back:
+## Midnight Business Card Back:
 
-![Sunset Business Card - back](.github/assets/sunset-business-card-back.jpg)
+![Midnight Business Card - back](.github/assets/midnight-business-card-back.jpg)
 
 # Get Rolling
 
-[Click here](https://fastn-community.github.io/sunset-business-card/) to learn how to use this package.
+[Click here](https://fastn-community.github.io/midnight-business-card/) to learn how to use this package.
 
-# [Dive into the Docs](https://fastn-community.github.io/sunset-business-card/)
+# [Dive into the Docs](https://fastn-community.github.io/midnight-business-card/)
 
 # [Changelog](Changelog.md)
 
